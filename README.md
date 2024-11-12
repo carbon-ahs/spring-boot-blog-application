@@ -10,6 +10,7 @@ https://www.youtube.com/watch?v=7iWlCl35p9o
 
 ## Main Repository link
 https://github.com/wazooinc/spring-boot-blog-application
+This repo is fabulous. It has a lot of examples and is well documented. It's a great starting point. It has branches for each level you want to get to.
 
 ### Reference Documentation
 For further reference, please consider the following sections:
