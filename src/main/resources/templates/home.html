@@ -24,7 +24,7 @@
     <div class="posts-container">
         <div class="post" th:each="post : ${posts}">
             <h2><a th:href="@{'/posts/' + ${post.id}}" th:text="${post.title}">Title</a></h2>
-<!--            <h5 class="text-muted" th:text="'Written by ' + ${post.account.firstName}">Account First Name</h5>-->
+            <h5 class="text-muted" th:text="'Written by ' + ${post.account.firstName}">Account First Name</h5>
             <h5 class="text-muted" th:text="'Published at ' + ${post.createdAt}">Created At</h5>
 <!--            <h5 class="text-muted" th:text="'Updated at ' + ${post.updatedAt}">Updated At</h5>-->
             <p th:text="${post.body}">body text</p>
