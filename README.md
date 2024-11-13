@@ -42,3 +42,4 @@ To prevent this, the project POM contains empty overrides for these elements.
 If you manually switch to a different parent and actually want the inheritance, you need to remove those overrides.
 
 12.11.2024: https://youtu.be/7iWlCl35p9o?si=PlaTpQ91yxGaKxje&t=2977
+13.11.2024: https://youtu.be/7iWlCl35p9o?si=XcoT2UFSl8WdhARH&t=7092

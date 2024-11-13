@@ -27,4 +27,17 @@ public class Post {
     private String body;
 
     private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
+
+    @Override
+    public String toString() {
+        return "Post{" +
+                "id=" + id +
+                ", account=" + account +
+                ", title='" + title + '\'' +
+                ", body='" + body + '\'' +
+                ", createdAt=" + createdAt +
+                ", updatedAt=" + updatedAt +
+                '}';
+    }
 }
