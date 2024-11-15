@@ -41,7 +41,7 @@ public class WebSecurityConfig {
                     auth.requestMatchers(antMatcher("/rss/**")).permitAll();
                     auth.requestMatchers(antMatcher("/register/**")).permitAll();
                     auth.requestMatchers(antMatcher("/posts/**")).permitAll();
-//                    auth.requestMatchers(PathRequest.toH2Console()).permitAll();
+                    auth.requestMatchers(PathRequest.toH2Console()).permitAll();
                     auth.requestMatchers(antMatcher("/h2-console/**")).permitAll();
                     auth.anyRequest().authenticated();
                 })
@@ -51,7 +51,7 @@ public class WebSecurityConfig {
                         .loginProcessingUrl("/login")
                         .usernameParameter("email")
                         .passwordParameter("password")
-//                        .defaultSuccessUrl("/")
+//                        .defaultSuccessUrl("/", true)
                         .successForwardUrl("/")
                         .failureUrl("/login?error")
                         .permitAll()

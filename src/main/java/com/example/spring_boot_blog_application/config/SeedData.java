@@ -62,7 +62,7 @@ public class SeedData implements CommandLineRunner {
             Set<Authority> authorities2 = new HashSet<>();
             authorityRepository.findById("ROLE_USER").ifPresent(authorities2::add);
             authorityRepository.findById("ROLE_ADMIN").ifPresent(authorities2::add);
-            account1.setAuthorities(authorities2);
+            account2.setAuthorities(authorities2);
 
             accountService.save(account1);
             accountService.save(account2);
