@@ -95,22 +95,19 @@ public class PostController{
 
         return "redirect:/posts/" + post.getId();
     }
-//
-//    @PostMapping("/posts/{id}")
-//    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
-//    public String deletePost(@PathVariable Long id, Post post, BindingResult result, Model model) {
-//        Optional<Post> optionalPost = postService.getById(id);
-//
-//        if (optionalPost.isPresent()){
-//            Post existingPost = optionalPost.get();
-//
-//            existingPost.setTitle(post.getTitle());
-//            existingPost.setBody(post.getBody());
-//
-//            postService.save(existingPost);
-//        }
-//
-//        return "redirect:/posts/" + post.getId();
-//    }
+
+    @PostMapping("/posts/{id}/delete")
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+    public String deletePost(@PathVariable Long id) {
+        Optional<Post> optionalPost = postService.getById(id);
+
+        if (optionalPost.isPresent()){
+            Post post = optionalPost.get();
+            postService.delete(post);
+            return "redirect:/";
+        } else {
+            return "404";
+        }
+    }
 }
 
